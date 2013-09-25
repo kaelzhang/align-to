@@ -3,19 +3,18 @@
 <meta charset="UTF-8">
 
 <script 
-src="http://localhost:8765/mod/neuronjs/2.0.1/neuron.js" 
+src="http://localhost:9074/mod/neuronjs/2.0.1/neuron.js" 
 id="neuron-js" 
-data-path="mod" 
-data-server="http://localhost:8765"></script>
+data-path="http://localhost:9074/mod"></script>
 
 <script>
-NR.Loader.on({
-    provide: function(e) {
-        console.log('event: provide', e.mod.id);
+loader.on({
+    use: function(e) {
+        console.log('event: use', e.mod.id);
     },
 
-    load: function(e) {
-        console.log('event: load', e.mod.id);
+    ready: function(e) {
+        console.log('event: ready', e.mod.id);
     }
 });
 </script>
