@@ -2,6 +2,12 @@
 
 Align the specified elements.
 
+![1](https://raw.github.com/kaelzhang/align/master/screenshots/1.png)
+
+```
+align(blue).to(yellow, ['TL', 'BL']);
+```
+
 ## Getting Started
 Before anything taking its part, you should install [node](http://nodejs.org) and "cortex".
 
@@ -31,6 +37,8 @@ Then, use `require` method in your module
 align(element).to(target, [from, to], options);
 ```
 
+## Usage
+
 The code above will coincide the `from` point of `element` with the `to` point of the `target`.
 
 #### element
@@ -59,12 +67,6 @@ LC             CC             RC
 |                              |
 |                              |
 BL ----------- BC ----------- BR
-```
-
-![1](https://raw.github.com/kaelzhang/align/master/screenshots/1.png)
-
-```
-align(blue).to(yellow, ['TL', 'BL']);
 ```
 
 ![2](https://raw.github.com/kaelzhang/align/master/screenshots/2.png)
