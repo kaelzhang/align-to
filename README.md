@@ -61,19 +61,19 @@ LC             CC             RC
 BL ----------- BC ----------- BR
 ```
 
-![1](./screenshots/1.png)
+![1](https://raw.github.com/kaelzhang/align/master/screenshots/1.png)
 
 ```
 align(blue).to(yellow, ['TL', 'BL']);
 ```
 
-![2](./screenshots/2.png)
+![2](https://raw.github.com/kaelzhang/align/master/screenshots/2.png)
 
 ```
 align(blue).to(yellow, ['BC', 'BC']);
 ```
 
-![3](./screenshots/3.png)
+![3](https://raw.github.com/kaelzhang/align/master/screenshots/3.png)
 
 ```
 align(blue).to(yellow, ['BR', 'BR'], {
