@@ -256,7 +256,7 @@ Align.prototype = {
              left: {number} adjust of x coordinate
          }
          
-         isFix: {boolean} whether the element should fix to the assigned position
+         fix: {boolean} whether the element should fix to the assigned position
      
      * usage:
      <code>

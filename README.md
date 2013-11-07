@@ -1,6 +1,6 @@
 # align
 
-> The best project ever.
+Align the specified elements.
 
 ## Getting Started
 Before anything taking its part, you should install [node](http://nodejs.org) and "cortex".
@@ -14,53 +14,80 @@ Visit [http://nodejs.org](http://nodejs.org), download and install the proper ve
     # maybe you should use `sudo`
     npm install -g cortex
 
-## Using align In Your Project
+## Using `align` In Your Project
 
-First, install 'align' directly with `ctx install` (recommended)
+First, install 'align' directly with `cortex install`
 	
-	ctx install align --save
-	
-or, you could update your package.json manually
-    
-    dependencies: {
-        'align': '<version-you-want>'
-    }
-    
-and install dependencies
-	
-	ctx install
+	cortex install align --save
     
 Then, use `require` method in your module
     
     var align = require('align');
-    
-Finally, start cortex server
-    
-    ctx server
-    
-Then cortex will care all the rest.
 
 
-## API Documentation
+## Synopsis
 
-### align: constructor
-': constructor' means the `module.exports` of module 'align' is a constructor that we should use it with the `new` keyword
+```js
+align(element).to(target, [from, to], options);
+```
 
-	new align(options)
-	
+The code above will coincide the `from` point of `element` with the `to` point of the `target`.
+
+#### element
+
+type `Element|jQueryElement`, the element to be placed.
+
+#### target
+
+type `Element|jQueryElement|'viewport'`, the target which `element` will be aligned to.
+
+#### from, to
+
+type `String`, the symbol of a specific point
+
+There are 7 points for a single rectangle:
+
+```
+TL ----------- TC ----------- TR
+|                              |
+|                              |
+|                              |
+|                              |
+LC             CC             RC
+|                              |
+|                              |
+|                              |
+|                              |
+BL ----------- BC ----------- BR
+```
+
+![1](./screenshots/1.png)
+
+```
+align(blue).to(yellow, ['TL', 'BL']);
+```
+
+![2](./screenshots/2.png)
+
+```
+align(blue).to(yellow, ['BC', 'BC']);
+```
+
+![3](./screenshots/3.png)
+
+```
+align(blue).to(yellow, ['BR', 'BR'], {
+	adjust: {
+		top: -5,
+		left: 5
+	}
+});
+```
+
+
 #### options
-- options.name {String}
 
+- `adjust.left` {number} the horizontal offset
+- `adjust.top` {number} the vertical offset
+- `fix` {boolean=false} if `true`, the element will be fixed to the destination position.
 
-
-### align.\<method-name\>(arguments)
-Means this is a static method of `module.exports`
-
-#### arguments
-// arguments description here
-
-### .\<method-name\>(arguments)
-Mean this is a method of the instance
-
-#### arguments
-// arguments description here
