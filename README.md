@@ -80,8 +80,8 @@ align(blue).to(yellow, ['BC', 'BC']);
 ```
 align(blue).to(yellow, ['BR', 'BR'], {
 	adjust: {
-		top: -5,
-		left: 5
+		top: 5,
+		left: 10
 	}
 });
 ```
