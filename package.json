@@ -1,12 +1,20 @@
 {
     "name": "align",
-    "description": "The best project ever.",
+    "description": "Align the specified elements.",
     "version": "1.0.0",
     "homepage": "https://github.com/kaelzhang/align",
     "author": {
         "name": "Kael",
         "email": "i@kael.me"
     },
+    "keywords": [
+        "align",
+        "position",
+        "vertical",
+        "horizontal",
+        "fix",
+        "fixed"
+    ],
     "repository": {
         "type": "git",
         "url": "git://github.com/kaelzhang/align.git"
