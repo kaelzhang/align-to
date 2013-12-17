@@ -1,7 +1,7 @@
 {
     "name": "align",
     "description": "Align the specified elements.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/kaelzhang/align",
     "author": {
         "name": "Kael",
@@ -38,7 +38,6 @@
     "main": "index.js",
     "cortex": {
         "dependencies": {
-            "lang": "~1.0.0",
             "jquery": "~1.9.2"
         }
     }

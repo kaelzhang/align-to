@@ -5,7 +5,6 @@
  * author  Kael Zhang
  */
 
-var lang    = require('lang');
 var $       = require('jquery');
 
 // @const
@@ -201,8 +200,6 @@ function Align(node){
 
     // @type {DOMElement}
     this._node = $(node);
-    
-    lang.bind('_align', this);
 };
 
 
