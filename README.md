@@ -89,7 +89,7 @@ align(blue).to(yellow, ['BR', 'BR'], {
 
 #### options
 
-- `adjust.left` {number} the horizontal offset
-- `adjust.top` {number} the vertical offset
-- `fix` {boolean=false} if `true`, the element will be fixed to the destination position.
+- left `number=0` the horizontal offset
+- top `number=0` the vertical offset
+- fix `boolean=false` if `true`, the element will be fixed to the destination position.
 
