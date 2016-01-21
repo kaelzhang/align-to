@@ -1,44 +1,42 @@
 {
-    "name": "align",
-    "description": "Align the specified elements.",
-    "version": "1.0.3",
-    "homepage": "https://github.com/kaelzhang/align",
-    "author": {
-        "name": "Kael",
-        "email": "i@kael.me"
-    },
-    "keywords": [
-        "align",
-        "position",
-        "vertical",
-        "horizontal",
-        "fix",
-        "fixed"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/kaelzhang/align.git"
-    },
-    "bugs": {
-        "url": "https://github.com/kaelzhang/align/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT",
-            "url": "https://github.com/kaelzhang/align/blob/master/LICENSE-MIT"
-        }
-    ],
-    "engines": {
-        "node": ">= 0.6.0"
-    },
-    "scripts": {
-        "test": "grunt test"
-    },
-    "keywords": [],
-    "main": "index",
-    "cortex": {
-        "dependencies": {
-            "jquery": "~1.9.2"
-        }
+  "name": "align-to",
+  "description": "Align the specified elements.",
+  "version": "1.0.3",
+  "homepage": "https://github.com/kaelzhang/align-to",
+  "author": {
+    "name": "Kael",
+    "email": "i@kael.me"
+  },
+  "keywords": [
+    "align",
+    "position",
+    "vertical",
+    "horizontal",
+    "fix",
+    "fixed"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kaelzhang/align-to.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaelzhang/align-to/issues"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/kaelzhang/align-to/blob/master/LICENSE-MIT"
+  }],
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [],
+  "main": "index",
+  "cortex": {
+    "dependencies": {
+      "jquery": "~1.9.2"
     }
+  }
 }

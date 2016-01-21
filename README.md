@@ -1,4 +1,4 @@
-# align
+# align-to
 
 Align the specified elements.
 
@@ -8,32 +8,10 @@ Align the specified elements.
 align(blue).to(yellow, ['TL', 'BL']);
 ```
 
-## Getting Started
-Before anything taking its part, you should install [node](http://nodejs.org) and "cortex".
-
-#### Install Node
-
-Visit [http://nodejs.org](http://nodejs.org), download and install the proper version of nodejs.
-
-#### Install Cortex
-
-    # maybe you should use `sudo`
-    npm install -g cortex
-
-## Using `align` In Your Project
-
-First, install 'align' directly with `cortex install`
-	
-	cortex install align --save
-    
-Then, use `require` method in your module
-    
-    var align = require('align');
-
-
 ## Synopsis
 
 ```js
+var align = require('align-to')
 align(element).to(target, [from, to], options);
 ```
 
