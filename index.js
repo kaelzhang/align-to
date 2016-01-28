@@ -13,7 +13,8 @@ var LEFT = 'left'
 var VIEWPORT = 'viewport'
 var SCROLL = 'scroll'
 
-var $HTML = $(document.documentElement)
+var HTML = document.documentElement
+var $HTML = $(HTML)
 var $WIN = $(window)
 
 function NOOP() {}
@@ -42,14 +43,14 @@ var PRESETS_POSITION_EXTRA_OFFSETS = {
   r: {
     as: LEFT,
     getter: function(node, type) {
-      return node.outerWidth()
+      return OFFSET_GETTER.width(node, type)
     }
   },
 
   b: {
     as: TOP,
     getter: function(node, type) {
-      return node.outerHeight()
+      return OFFSET_GETTER.height(node, type)
     }
   },
 
@@ -62,15 +63,30 @@ var PRESETS_POSITION_EXTRA_OFFSETS = {
 
   c: {
     getter: function(node, type, coor_direction) {
-      return node[OFFSET_MAP_TO_SIZE[coor_direction]]() / 2
+      return OFFSET_GETTER[OFFSET_MAP_TO_SIZE[coor_direction]](node, type) / 2
     }
   }
 }
 
 // @enum
 var OFFSET_MAP_TO_SIZE = {
-  left: 'outerWidth',
-  top: 'outerHeight'
+  left: 'width',
+  top: 'height'
+}
+
+
+var OFFSET_GETTER = {
+  width: function (node, type) {
+    return node[0] === HTML
+      ? HTML.clientWidth
+      : node.outerWidth()
+  },
+
+  height: function (node, type) {
+    return node[0] === HTML
+      ? HTML.clientHeight
+      : node.outerHeight()
+  }
 }
 
 
