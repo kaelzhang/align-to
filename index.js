@@ -198,6 +198,7 @@ function Align(node) {
 
   // @type {DOMElement}
   this._node = $(node)
+  this._align = this._align.bind(this)
 }
 
 
